@@ -1,4 +1,4 @@
-# 06 — Portfolio Construction: Catching Our Own Selection Bias
+# 06 - Portfolio Construction: Catching Our Own Selection Bias
 
 ## The Problem
 
@@ -6,7 +6,7 @@ Scripts: `08_portfolio_greedy.py`, `09_day_stability.py`, `16_proper_oos_portfol
 
 After the pair sweep (Step 04), we had 471 profitable pairs. The initial headline was bold: "K=1 portfolio of 23 cross-category pairs = **552,415 OOS PnL.**"
 
-Then we looked more carefully at how that number was computed — and caught ourselves cheating.
+Then we looked more carefully at how that number was computed - and caught ourselves cheating.
 
 ## The Bias
 
@@ -14,7 +14,7 @@ The 552k number was computed by:
 1. Selecting pairs that were positive on D4
 2. Totalling their D4 PnL
 
-That's circular. We selected the winners *on the test set*, then measured their performance *on the same test set*. Of course it looked great — every pair was positive by construction.
+That's circular. We selected the winners *on the test set*, then measured their performance *on the same test set*. Of course it looked great - every pair was positive by construction.
 
 ## The Honest Test
 
@@ -26,11 +26,11 @@ Script `16_proper_oos_portfolio.py` did it correctly:
 
 | Selection rule | Pairs | IS (D2+D3) PnL | **D4 OOS PnL** | Positive/Negative |
 |---|---|---|---|---|
-| A — total IS rank | 24 | 806,655 | **197,930** | 20 / 4 |
-| B — require D2>0 AND D3>0 | 24 | 791,850 | 194,990 | 20 / 4 |
-| C — B + require total ≥ 20k | 19 | 717,470 | 188,180 | 17 / 2 |
-| D — rank by D3 only (recency) | 24 | 683,855 | 156,820 | 17 / 7 |
-| Cheating upper bound | 24 | — | 584,455 | 24 / 0 |
+| A - total IS rank | 24 | 806,655 | **197,930** | 20 / 4 |
+| B - require D2>0 AND D3>0 | 24 | 791,850 | 194,990 | 20 / 4 |
+| C - B + require total ≥ 20k | 19 | 717,470 | 188,180 | 17 / 2 |
+| D - rank by D3 only (recency) | 24 | 683,855 | 156,820 | 17 / 7 |
+| Cheating upper bound | 24 | - | 584,455 | 24 / 0 |
 
 **Strategy A (simple total-IS rank) was best at 197,930.** Stability filters didn't add value. The honest OOS captured 34% of the cheating optimum.
 
@@ -54,7 +54,7 @@ Only 1 of 23 pairs flipped negative after costs. Top pairs lost only 9–18%.
 | 3-day PnL (real bid/ask fills) | ~440,000 | **~155,000** |
 | Pairs positive on D4 | 23/23 (by construction) | 20/24 |
 
-Still a shippable strategy — positive on 83% of pairs, 90% trade-level win rate, no portfolio-level negative day. But **3× smaller** than the initial cherry-picked claim.
+Still a shippable strategy - positive on 83% of pairs, 90% trade-level win rate, no portfolio-level negative day. But **3× smaller** than the initial cherry-picked claim.
 
 ## Why We Published This Correction
 
@@ -62,4 +62,4 @@ It would have been easy to present only the 552k number. But we'd already learne
 
 ---
 
-**Next:** [07-negative-results.md](07-negative-results.md) — What we tried that didn't work.
+**Next:** [07-negative-results.md](07-negative-results.md) - What we tried that didn't work.

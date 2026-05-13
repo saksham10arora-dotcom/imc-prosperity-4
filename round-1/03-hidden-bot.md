@@ -1,8 +1,8 @@
-# 03 — The Dumb Bot: Hidden Alpha in Empty Books
+# 03 - The Dumb Bot: Hidden Alpha in Empty Books
 
 ## The Question
 
-After identifying all visible bots from historical data (Bots 1–5), were there any bots we couldn't see? The historical data showed a market that never went to zero on either side — but what happens when one side is cleared?
+After identifying all visible bots from historical data (Bots 1–5), were there any bots we couldn't see? The historical data showed a market that never went to zero on either side - but what happens when one side is cleared?
 
 ## How It Was Found
 
@@ -22,7 +22,7 @@ The offset is approximately ±100 but may be slightly randomized (live data show
 ## Why We Missed It
 
 1. **Not in historical data.** The wall bots post 10–30 units at ±8 and ±10.5. With an 80-unit position limit, a player can't clear 40+ units of depth in a single tick. But across several ticks, aggressive buying CAN empty the ask side.
-2. **Requires live probing.** The historical CSV replay is purely observational — no player-driven orders. You must submit code to the live platform to trigger the empty-book state.
+2. **Requires live probing.** The historical CSV replay is purely observational - no player-driven orders. You must submit code to the live platform to trigger the empty-book state.
 3. **Prior-year knowledge helps.** beast knew to look for this because similar hidden bots existed in Prosperity 2 and 3.
 
 ## The Impact
@@ -30,16 +30,16 @@ The offset is approximately ±100 but may be slightly randomized (live data show
 | Metric | Without Dumb Bot | With Dumb Bot |
 |---|---|---|
 | Live PnL | 10,700 | **12,200** |
-| Improvement | — | **+1,500 (+14%)** |
+| Improvement | - | **+1,500 (+14%)** |
 
 The Dumb Bot exploit contributed ~1.5K of the final 12.2K live score. Implementation required reserving 15 units of position capacity (soft limit 65 instead of 80) to leave room for Dumb Bot fills.
 
 ## Lesson Learned
 
-**The biggest PnL gain in Round 1 came from a competitor tip, not from data analysis.** All our research (V13–V16, asymmetry signal, bot sniping) produced zero incremental alpha. The Dumb Bot discovery — found by probing live, not by analyzing CSVs — was worth +1.5K.
+**The biggest PnL gain in Round 1 came from a competitor tip, not from data analysis.** All our research (V13–V16, asymmetry signal, bot sniping) produced zero incremental alpha. The Dumb Bot discovery - found by probing live, not by analyzing CSVs - was worth +1.5K.
 
-**Implication for future rounds:** Submit test strategies on Day 1 to probe for hidden bots. Don't wait for the data to tell you everything — some edges only exist in live.
+**Implication for future rounds:** Submit test strategies on Day 1 to probe for hidden bots. Don't wait for the data to tell you everything - some edges only exist in live.
 
 ---
 
-**Next:** [04-iawa-intel.md](04-iawa-intel.md) — What we learned from networking with a top competitor.
+**Next:** [04-iawa-intel.md](04-iawa-intel.md) - What we learned from networking with a top competitor.

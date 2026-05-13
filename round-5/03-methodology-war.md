@@ -1,4 +1,4 @@
-# 03 — The Methodology War: Rolling-Z vs Previous-Day Mean
+# 03 - The Methodology War: Rolling-Z vs Previous-Day Mean
 
 ## The Problem
 
@@ -13,7 +13,7 @@ This was the single most consequential research question in R5. Two different me
 
 ### The Divergence
 
-Same data, same pair, same entry/exit rules — different anchor:
+Same data, same pair, same entry/exit rules - different anchor:
 
 | Pair | Method A (prev-day) | Method B (rolling-z) |
 |---|---|---|
@@ -39,15 +39,15 @@ We designed a proper out-of-sample test. Train on days 2+3 (20,000 ticks). Trade
 
 ### Why Method A Failed
 
-Method A assumed the spread mean was stable across days. But R5 spreads drifted — the mean on day 3 was different from day 2. When Method A used yesterday's mean as today's anchor, it either:
+Method A assumed the spread mean was stable across days. But R5 spreads drifted - the mean on day 3 was different from day 2. When Method A used yesterday's mean as today's anchor, it either:
 - Never fired (spread had drifted away from yesterday's mean permanently), or
 - Fired on the wrong side (yesterday's "fair" was today's "extreme")
 
-Method A's apparent wins (like SNACKPACK CHOC−VAN +25k) were small-sample artifacts — it fired 1–7 trades total, and those few happened to be winners. Method B fired 30–40 trades on the same pair, with consistent 85%+ win rates.
+Method A's apparent wins (like SNACKPACK CHOC−VAN +25k) were small-sample artifacts - it fired 1–7 trades total, and those few happened to be winners. Method B fired 30–40 trades on the same pair, with consistent 85%+ win rates.
 
 ### Why Method B Worked
 
-The rolling window **tracked the drift** while still detecting within-window excursions. It didn't care where the spread "should" be — it measured where the spread *has been recently* and fired when the current value was extreme relative to that recent history.
+The rolling window **tracked the drift** while still detecting within-window excursions. It didn't care where the spread "should" be - it measured where the spread *has been recently* and fired when the current value was extreme relative to that recent history.
 
 ## What This Changed
 
@@ -65,4 +65,4 @@ The methodology war consumed multiple research sessions. In hindsight, we should
 
 ---
 
-**Next:** [04-pair-sweep.md](04-pair-sweep.md) — All 1,225 pairs, ranked.
+**Next:** [04-pair-sweep.md](04-pair-sweep.md) - All 1,225 pairs, ranked.

@@ -1,10 +1,10 @@
-# 05 — Bot Forensics: Reverse-Engineering the Simulator
+# 05 - Bot Forensics: Reverse-Engineering the Simulator
 
 ## The Question
 
 Scripts: `18_bot_behavior.py`, `19_bot_coordination.py`, `20_basket_implications.py`
 
-Counterparty names were redacted in R5 (buyer/seller fields blank). But the trade tape itself — timestamps, prices, quantities — still contained information. We asked: can we reverse-engineer the simulator's bot structure from the tape alone?
+Counterparty names were redacted in R5 (buyer/seller fields blank). But the trade tape itself - timestamps, prices, quantities - still contained information. We asked: can we reverse-engineer the simulator's bot structure from the tape alone?
 
 ## The Discovery: 3 Basket Bots
 
@@ -19,7 +19,7 @@ By analyzing which products traded at exactly the same timestamps, we discovered
 
 **Verification:** `733×40 + 644×5 + 569×5 = 35,385 ✓`
 
-Trade-tick sets were *byte-identical* across all members of a basket — when the BIG basket fired, all 40 products had trades at that exact tick, every time, with zero exceptions.
+Trade-tick sets were *byte-identical* across all members of a basket - when the BIG basket fired, all 40 products had trades at that exact tick, every time, with zero exceptions.
 
 ## Behavioral Analysis
 
@@ -68,7 +68,7 @@ Mid-price moves on basket ticks vs quiet ticks:
 
 These findings reshaped how we thought about the strategy:
 
-1. **Don't chase the tape.** Trade-tape-based signals (aggressor following, flow imbalance from trades) are useless in R5 — there is no informed counterparty.
+1. **Don't chase the tape.** Trade-tape-based signals (aggressor following, flow imbalance from trades) are useless in R5 - there is no informed counterparty.
 
 2. **Our edge is in quote evolution.** 94% of our z-score pair signals fire on quiet ticks (no trade). The spread signal comes from the order book updating, not from trade flow.
 
@@ -80,4 +80,4 @@ These findings reshaped how we thought about the strategy:
 
 ---
 
-**Next:** [06-portfolio.md](06-portfolio.md) — Building a portfolio honestly.
+**Next:** [06-portfolio.md](06-portfolio.md) - Building a portfolio honestly.

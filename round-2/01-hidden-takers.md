@@ -1,12 +1,12 @@
-# 01 — Hidden Takers: 64% of Fills Are Invisible
+# 01 - Hidden Takers: 64% of Fills Are Invisible
 
 ## The Question
 
-After Round 1 scoring, we had access to our live execution log (`222844.log` — 983 ticks, 108 fills). We asked: how many of our fills matched visible book levels, and how many came from counterparties we couldn't see?
+After Round 1 scoring, we had access to our live execution log (`222844.log` - 983 ticks, 108 fills). We asked: how many of our fills matched visible book levels, and how many came from counterparties we couldn't see?
 
 ## The Discovery
 
-**64% of our live fills (69/108) came from hidden flow** — counterparties NOT visible in the order book snapshot at the time of the trade.
+**64% of our live fills (69/108) came from hidden flow** - counterparties NOT visible in the order book snapshot at the time of the trade.
 
 | Fill Type | Count | Share |
 |---|---|---|
@@ -16,7 +16,7 @@ After Round 1 scoring, we had access to our live execution log (`222844.log` —
 
 ### Where Hidden Fills Concentrate
 
-Hidden fills clustered at `best_bid + 1` and `best_ask - 1` — inside the spread. These counterparties posted inside the visible book levels, but their orders arrived and were consumed within the same tick.
+Hidden fills clustered at `best_bid + 1` and `best_ask - 1` - inside the spread. These counterparties posted inside the visible book levels, but their orders arrived and were consumed within the same tick.
 
 ### Per-Product Breakdown
 
@@ -35,7 +35,7 @@ The order book in `TradingState` is what's LEFT after all bot orders and market 
 
 ### 2. Price-Time Priority Is Real
 
-Bot orders have time priority at the same price level. If we post at `best_bid`, we do NOT get filled — the bot was there first. To get passive fills, we must **improve the price**.
+Bot orders have time priority at the same price level. If we post at `best_bid`, we do NOT get filled - the bot was there first. To get passive fills, we must **improve the price**.
 
 ### 3. Price Improvement Exists
 
@@ -50,8 +50,8 @@ After iterative calibration:
 | Osmium | 0.0155 | 0.0140 |
 | Pepper | 0.0010 | 0.0030 |
 
-**Result:** Local backtester produced 288,619 PnL vs 288,510 official replay — **0.04% error**.
+**Result:** Local backtester produced 288,619 PnL vs 288,510 official replay - **0.04% error**.
 
 ---
 
-**Next:** [03-maf-manual.md](03-maf-manual.md) — Manual challenge analysis.
+**Next:** [03-maf-manual.md](03-maf-manual.md) - Manual challenge analysis.

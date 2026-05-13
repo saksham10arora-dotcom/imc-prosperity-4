@@ -21,8 +21,8 @@ We identified three distinct spread regimes:
 
 | Regime | Condition | Frequency | Interpretation |
 |---|---|---|---|
-| Tight | spread ≤ 2 | 4% of ticks | Momentary book compression — aggressive quotes |
-| Large-wall | bid_vol ≥ 45 | 45–70% | Large resting orders at L1 — stable regime |
+| Tight | spread ≤ 2 | 4% of ticks | Momentary book compression - aggressive quotes |
+| Large-wall | bid_vol ≥ 45 | 45–70% | Large resting orders at L1 - stable regime |
 | Normal | everything else | ~30% | Standard trading |
 
 The tight-spread regime was interesting: when `ask_vol < 15 AND spread ≤ 2`, it signaled a compression event where we could buy cheaply. The symmetric condition (`bid_vol < 15 AND spread ≤ 2`) signaled a sell.
@@ -44,4 +44,4 @@ We used an EMA-based z-score: track the rolling mean and standard deviation of m
 
 ---
 
-**Next:** [03-options.md](03-options.md) — Pricing VEV vouchers and the flat vol smile.
+**Next:** [03-options.md](03-options.md) - Pricing VEV vouchers and the flat vol smile.

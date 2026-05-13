@@ -1,4 +1,4 @@
-# 02 — The PEBBLES Constraint: XS + S + M + L + XL = 50,000
+# 02 - The PEBBLES Constraint: XS + S + M + L + XL = 50,000
 
 ## The Discovery
 
@@ -14,7 +14,7 @@ Max:   50,017.0
 Range: 35.0
 ```
 
-**XS + S + M + L + XL = 50,000, always, to within ±3 ticks.** This was not approximate — it was a hard constraint baked into the data generator.
+**XS + S + M + L + XL = 50,000, always, to within ±3 ticks.** This was not approximate - it was a hard constraint baked into the data generator.
 
 No other category came close. We tested all 10:
 
@@ -44,7 +44,7 @@ If 4 products move slightly, the 5th must absorb the residual to maintain the su
 | L | 14.9 |
 | **XL** | **30.3** |
 
-XL's volatility was exactly the quadrature sum of the other four — confirming it mechanically balanced the constraint.
+XL's volatility was exactly the quadrature sum of the other four - confirming it mechanically balanced the constraint.
 
 ### 2. Return cross-correlations are mechanical
 
@@ -64,7 +64,7 @@ We checked whether the constraint could be directly exploited:
 
 The constraint *does* help indirectly: it forces spreads between PEBBLES pairs to revert quickly. If M drifts up while XL drifts down (sum stays constant), the M−XL spread will revert because both are being pulled back toward their constraint-consistent levels.
 
-This was confirmed by the pair backtest results — PEBBLES pairs had the strongest and fastest mean-reversion of any category, and specifically preferred shorter rolling windows (w=200) because reversion was mechanically fast.
+This was confirmed by the pair backtest results - PEBBLES pairs had the strongest and fastest mean-reversion of any category, and specifically preferred shorter rolling windows (w=200) because reversion was mechanically fast.
 
 ## PEBBLES Window Sensitivity (Script 03)
 
@@ -88,4 +88,4 @@ The constraint made each product a near-perfect linear function of the other fou
 
 ---
 
-**Next:** [03-methodology-war.md](03-methodology-war.md) — The debate that decided everything.
+**Next:** [03-methodology-war.md](03-methodology-war.md) - The debate that decided everything.

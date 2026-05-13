@@ -14,4 +14,4 @@ The three research documents in this folder answer these in order.
 
 ---
 
-**Start here:** [01-hydrogel.md](01-hydrogel.md) — The ±8 bot discovery that defined our R3 strategy.
+**Start here:** [01-hydrogel.md](01-hydrogel.md) - The ±8 bot discovery that defined our R3 strategy.

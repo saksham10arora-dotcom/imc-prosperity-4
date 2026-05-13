@@ -1,6 +1,6 @@
-# Round 5 — 50-Product Research Program
+# Round 5 - 50-Product Research Program
 
-Everything changed. 50 new products in 10 categories of 5 each. All R3/R4 products gone. Position limits dropped from 200 to 10 (a 20× reduction). Counterparty names redacted again. No options — all delta-1.
+Everything changed. 50 new products in 10 categories of 5 each. All R3/R4 products gone. Position limits dropped from 200 to 10 (a 20× reduction). Counterparty names redacted again. No options - all delta-1.
 
 This folder documents the research program we ran across these 50 products. It's organized as 8 numbered steps, each building on the previous findings.
 

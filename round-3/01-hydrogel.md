@@ -1,4 +1,4 @@
-# 01 — HYDROGEL_PACK: The ±8 Bot
+# 01 - HYDROGEL_PACK: The ±8 Bot
 
 ## The Question
 
@@ -34,10 +34,10 @@ When we plotted the distribution of trade prices relative to wall mid, a strikin
 
 - **36% of all trades** occurred at exactly `wall_mid ± 8` ticks (within ±0.5 tolerance)
 - Top offsets from wall mid: **+8.5** (93 trades), **−7.5** (88), **−8.5** (83), **+7.5** (82)
-- Lot sizes were uniform {2, 3, 4, 5, 6} — Herfindahl = 0.20 (maximum diversity)
-- Cadence: top gap = 100 ticks (10.0% share), median gap = 700 ticks — Poisson-ish
+- Lot sizes were uniform {2, 3, 4, 5, 6} - Herfindahl = 0.20 (maximum diversity)
+- Cadence: top gap = 100 ticks (10.0% share), median gap = 700 ticks - Poisson-ish
 
-**This was a symmetric, uninformed market-taking bot.** It wasn't responding to signals — it was mechanically lifting asks and hitting bids at fixed offsets from fair value. Not a market-maker (not one-sided). Not informed (symmetric). Just noise flow hitting the book at ±8.
+**This was a symmetric, uninformed market-taking bot.** It wasn't responding to signals - it was mechanically lifting asks and hitting bids at fixed offsets from fair value. Not a market-maker (not one-sided). Not informed (symmetric). Just noise flow hitting the book at ±8.
 
 ## Why This Mattered
 
@@ -64,4 +64,4 @@ When `spread ≥ 15` ticks → quotes reset (ignore previous levels).
 
 ---
 
-**Next:** [02-velvetfruit.md](02-velvetfruit.md) — The dual-role asset that served as both a standalone trade and an options hedge.
+**Next:** [02-velvetfruit.md](02-velvetfruit.md) - The dual-role asset that served as both a standalone trade and an options hedge.

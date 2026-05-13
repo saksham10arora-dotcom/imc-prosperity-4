@@ -26,7 +26,7 @@ We computed implied volatility for each strike using Black-Scholes inversion, th
 | Parabola R² | **0.02–0.09** |
 | Per-strike IV range | 0.223 – 0.241 |
 
-A parabola fit explained only 2–9% of the IV variation. **The smile was effectively flat.** There was no need for per-strike IV calibration — a single volatility number was sufficient.
+A parabola fit explained only 2–9% of the IV variation. **The smile was effectively flat.** There was no need for per-strike IV calibration - a single volatility number was sufficient.
 
 This was a major architectural simplification. Instead of maintaining a smile model, we could use one σ for all strikes.
 

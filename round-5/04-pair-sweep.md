@@ -1,10 +1,10 @@
-# 04 — The 1,225-Pair Sweep
+# 04 - The 1,225-Pair Sweep
 
 ## The Idea
 
 Scripts: `04_cross_category.py`, `06_cross_category_oos.py` → Outputs: `04_cross_category.csv`, `06_cross_category_oos.csv`
 
-After resolving the methodology war in favor of rolling-z, we asked: why limit ourselves to within-category pairs? If rolling-z can detect spread stationarity in drifting products, then *any* two products whose spreads revert — whether in the same category or not — should work.
+After resolving the methodology war in favor of rolling-z, we asked: why limit ourselves to within-category pairs? If rolling-z can detect spread stationarity in drifting products, then *any* two products whose spreads revert - whether in the same category or not - should work.
 
 50 products × 49 partners ÷ 2 = **1,225 unique unordered pairs.** We tested all of them.
 
@@ -50,7 +50,7 @@ The cross-category edge was much larger than within-category. Here's why this wa
 
 ### "Factor Proxy" Products
 
-Some products appeared in many profitable pairs — acting as universal hedging legs:
+Some products appeared in many profitable pairs - acting as universal hedging legs:
 
 | Product | Appearances in top-50 OOS pairs |
 |---|---|
@@ -61,11 +61,11 @@ Some products appeared in many profitable pairs — acting as universal hedging 
 | PEBBLES_XL | 6 |
 | PEBBLES_M | 6 |
 
-These products had high individual volatility (wide price walks) but their walks were predictable enough that pairing them with quieter products produced stationary spreads. PEBBLES_XL — with its 2× volatility from the sum constraint — was especially effective.
+These products had high individual volatility (wide price walks) but their walks were predictable enough that pairing them with quieter products produced stationary spreads. PEBBLES_XL - with its 2× volatility from the sum constraint - was especially effective.
 
 ## The 13-Pair "Robust Core"
 
-We identified pairs that were profitable on *every individual day* (D2, D3, AND D4). These are the most robust — not dependent on any single day's regime:
+We identified pairs that were profitable on *every individual day* (D2, D3, AND D4). These are the most robust - not dependent on any single day's regime:
 
 | Pair | D2 | D3 | D4 | Total |
 |---|---|---|---|---|
@@ -83,4 +83,4 @@ Note the monotonic improvement: D2 was weakest (rolling window still warming up)
 
 ---
 
-**Next:** [05-bot-forensics.md](05-bot-forensics.md) — Who is actually generating these trades?
+**Next:** [05-bot-forensics.md](05-bot-forensics.md) - Who is actually generating these trades?

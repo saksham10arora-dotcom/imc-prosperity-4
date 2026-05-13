@@ -12,12 +12,12 @@ This repository documents the complete research process behind our performance i
 
 ## How to Read This Repo
 
-The research is organized into five rounds. Each round folder contains numbered markdown files that tell the story in order. Read them sequentially — each finding builds on the last.
+The research is organized into five rounds. Each round folder contains numbered markdown files that tell the story in order. Read them sequentially - each finding builds on the last.
 
 ```
 round-1/                    R1: Bot decomposition + OU process
   ├── 01-osmium.md          6-bot fingerprint + OU clock discovery
-  ├── 02-pepper.md          Trending asset — signal found, unmonetizable
+  ├── 02-pepper.md          Trending asset - signal found, unmonetizable
   ├── 03-hidden-bot.md      Hidden bot discovered via live probing
   ├── 04-iawa-intel.md      Cross-team intel that confirmed our calibration
   └── 05-mc-simulator.md    Monte Carlo simulator for strategy comparison
@@ -56,13 +56,13 @@ round-5/                    R5: 50-product research program (the big one)
 
 ## The Arc in 60 Seconds
 
-**Round 1** - ASH_COATED_OSMIUM was an OU process (half-life ~24 ticks) with 6 decomposable bots. We fingerprinted each one independently. Live probing revealed a hidden bot that only appears when one side of the book is emptied — we exploited it for +1.5K of our 12.2K live score. Result: **#90 globally.**
+**Round 1** - ASH_COATED_OSMIUM was an OU process (half-life ~24 ticks) with 6 decomposable bots. We fingerprinted each one independently. Live probing revealed a hidden bot that only appears when one side of the book is emptied - we exploited it for +1.5K of our 12.2K live score. Result: **#90 globally.**
 
-**Round 2** - We analyzed our live execution log and found 64% of fills came from hidden flow — counterparties invisible in the book snapshot. Built a high-fidelity backtester calibrated to 0.04% error vs official replay. This infrastructure was the foundation for every round after.
+**Round 2** - We analyzed our live execution log and found 64% of fills came from hidden flow - counterparties invisible in the book snapshot. Built a high-fidelity backtester calibrated to 0.04% error vs official replay. This infrastructure was the foundation for every round after.
 
 **Round 3** - We discovered that HYDROGEL_PACK had a symmetric bot trading at exactly ±8 ticks from fair value. We undercut it at ±7. For options, we proved the vol smile was flat (R² = 0.02) and used single-vol Black-Scholes. Result: **#84 globally, #7 India.**
 
-**Round 4** - Counterparty names appeared. We identified Mark 38 as the ±8 bot, Mark 14 as the passive market-maker, Mark 22 as a sporadic ±4 undercut. For vouchers, Mark 22 was a persistent seller and Mark 01 the persistent buyer — we stepped inside Mark 01's bid. A sub-agent twice produced wrong IV calibration; our independent review process caught both errors before they shipped.
+**Round 4** - Counterparty names appeared. We identified Mark 38 as the ±8 bot, Mark 14 as the passive market-maker, Mark 22 as a sporadic ±4 undercut. For vouchers, Mark 22 was a persistent seller and Mark 01 the persistent buyer - we stepped inside Mark 01's bid. A sub-agent twice produced wrong IV calibration; our independent review process caught both errors before they shipped.
 
 **Round 5** - Everything reset. 50 new products, position limits dropped 20×, counterparty names redacted again. We ran a 21-script research program that produced three headline findings:
 

@@ -9,4 +9,4 @@ The research question shifted from "what kind of asset is this?" to "who exactly
 
 ---
 
-**Start here:** [01-counterparty.md](01-counterparty.md) — Identifying the Marks.
+**Start here:** [01-counterparty.md](01-counterparty.md) - Identifying the Marks.

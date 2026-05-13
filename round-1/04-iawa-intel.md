@@ -1,4 +1,4 @@
-# 04 — iawa / chrispyroberts: Competitive Intelligence Exchange
+# 04 - iawa / chrispyroberts: Competitive Intelligence Exchange
 
 ## The Question
 
@@ -44,8 +44,8 @@ We asked how fill priority works when multiple participants quote at the same pr
 
 ## Impact
 
-The exchange didn't produce direct alpha but provided **confidence calibration** — knowing our bot models were independently validated gave us assurance to ship without second-guessing.
+The exchange didn't produce direct alpha but provided **confidence calibration** - knowing our bot models were independently validated gave us assurance to ship without second-guessing.
 
 ---
 
-**Next:** [05-mc-simulator.md](05-mc-simulator.md) — Building a synthetic market from calibrated parameters.
+**Next:** [05-mc-simulator.md](05-mc-simulator.md) - Building a synthetic market from calibrated parameters.

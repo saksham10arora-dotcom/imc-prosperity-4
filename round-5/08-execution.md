@@ -1,4 +1,4 @@
-# 08 — Execution Constraints: Group vs Pair & Production Architecture
+# 08 - Execution Constraints: Group vs Pair & Production Architecture
 
 ## Group Residual vs Pair Spread
 
@@ -23,7 +23,7 @@ One of our most important architectural findings was *when* to use each approach
 
 **The rule:** Group residual dominates when the category has strong internal structure (PEBBLES' sum constraint, TRANSLATOR's factor, SNACKPACK's 2-group anti-correlation, MICROCHIP's shape-pair relationships). All 5 products contribute signal, and the group mean is a better fair-value estimate than any single pair partner.
 
-Pair spread wins when siblings are independent or weakly correlated (SLEEP_POD, ROBOT, PANEL, UV_VISOR, OXYGEN_SHAKE, GALAXY_SOUNDS). The group mean is noise — better to pick the two most cointegrated products directly.
+Pair spread wins when siblings are independent or weakly correlated (SLEEP_POD, ROBOT, PANEL, UV_VISOR, OXYGEN_SHAKE, GALAXY_SOUNDS). The group mean is noise - better to pick the two most cointegrated products directly.
 
 ## The traderData Limit
 
@@ -40,13 +40,13 @@ We had to strip down to v3 with shorter windows and fewer modules. Mitigation te
 
 ## Final Architecture: `finalfinal.py`
 
-The production trader (`finalfinal.py`, 1,940 lines) was far more ambitious than the conservative "Tier 1 only" plan. It deployed **10 strategy modules covering all 10 categories** — every product in the R5 field was either traded directionally or market-made.
+The production trader (`finalfinal.py`, 1,940 lines) was far more ambitious than the conservative "Tier 1 only" plan. It deployed **10 strategy modules covering all 10 categories** - every product in the R5 field was either traded directionally or market-made.
 
 ### Three Strategy Types
 
-1. **GroupResidualModule** — Trades each of 5 products vs the category mean (PEBBLES only)
-2. **PairSpreadModule** — Trades the spread between specific product pairs using rolling z-scores
-3. **Market-Making Fallback** — Any product without an active directional signal gets bid/ask quotes inside the spread
+1. **GroupResidualModule** - Trades each of 5 products vs the category mean (PEBBLES only)
+2. **PairSpreadModule** - Trades the spread between specific product pairs using rolling z-scores
+3. **Market-Making Fallback** - Any product without an active directional signal gets bid/ask quotes inside the spread
 
 ### The 10 Modules
 
