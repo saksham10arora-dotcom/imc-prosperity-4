@@ -8,7 +8,7 @@ After identifying all visible bots from historical data (Bots 1–5), were there
 
 **We didn't find it. beast did.**
 
-beast (an external competitor/friend) had experience from prior Prosperity competitions. His methodology: **submit a strategy designed to eat one side of the order book entirely, then observe what happens in live.**
+ **submit a strategy designed to eat one side of the order book entirely, then observe what happens in live.**
 
 This is standard practice for experienced Prosperity players. In historical data, both sides of the book always have orders (from the wall bots), so the empty-book state never occurs. The only way to trigger it is to consume every ask (or every bid) in a live submission.
 
