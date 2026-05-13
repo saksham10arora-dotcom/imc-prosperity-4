@@ -1,4 +1,4 @@
-# 03 — VEV Vouchers: The Flat Vol Smile
+# 03 - VEV Vouchers: The Flat Vol Smile
 
 ## The Question
 
