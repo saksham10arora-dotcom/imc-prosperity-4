@@ -13,7 +13,7 @@ We ran a full statistical fingerprint using 3 days of historical data (days 0–
 | Lag-1 autocorrelation | **−0.129** | Mean-reverting (negative = price overshoots then corrects) |
 | Hurst exponent (R/S) | **H = 0.196** | Strongly sub-diffusive (well below 0.5 random walk) |
 | AR(1) half-life | **~300 ticks** | Deviations from fair value correct in ~30 seconds |
-| Long-term mean | ~9991 | Stable across all 3 days, std = 32 |
+| Long-term mean | ~9991 | Stable across all 3 days |
 
 **Conclusion:** HYDROGEL_PACK is a textbook mean-reverting asset. Price deviates from ~9991, then snaps back.
 
@@ -35,7 +35,7 @@ When we plotted the distribution of trade prices relative to wall mid, a strikin
 - **36% of all trades** occurred at exactly `wall_mid ± 8` ticks (within ±0.5 tolerance)
 - Top offsets from wall mid: **+8.5** (93 trades), **−7.5** (88), **−8.5** (83), **+7.5** (82)
 - Lot sizes were uniform {2, 3, 4, 5, 6} — Herfindahl = 0.20 (maximum diversity)
-- Cadence: top gap = 100 ticks (10% share), median gap = 700 ticks — Poisson-ish
+- Cadence: top gap = 100 ticks (10.0% share), median gap = 700 ticks — Poisson-ish
 
 **This was a symmetric, uninformed market-taking bot.** It wasn't responding to signals — it was mechanically lifting asks and hitting bids at fixed offsets from fair value. Not a market-maker (not one-sided). Not informed (symmetric). Just noise flow hitting the book at ±8.
 

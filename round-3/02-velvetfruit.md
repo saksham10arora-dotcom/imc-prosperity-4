@@ -36,16 +36,11 @@ With 200 units of position limit and a dual role (standalone trading + option he
 
 This was conservative, but losing control of the hedge budget risked uncontrolled delta exposure from the options book.
 
-## Z-Score Strategy
+## Mean-Reversion Signal
 
-Rather than the wall-mid approach used for HYDROGEL, VELVETFRUIT used an EMA-based z-score:
+The lag-1 autocorrelation of −0.159 meant we could trade deviations from fair value. Unlike HYDROGEL (where we market-made at fixed offsets from wall mid), VELVETFRUIT required an adaptive approach because the spread was narrower (5 ticks vs 16) and there was no fixed-offset bot to exploit.
 
-1. Track `EMA_mean` and `EMA_std` (both using α = 0.0002)
-2. Compute `z = (mid - EMA_mean) / EMA_std`
-3. Buy aggressively (hit ask) when `z < -1.5`
-4. Sell aggressively (hit bid) when `z > +1.5`
-
-The EMA parameters were **seeded from historical priors** on the first tick (mean = 5250.10, std = 15.63), then updated every tick. This eliminated cold-start issues — the strategy was ready from tick 1.
+We used an EMA-based z-score: track the rolling mean and standard deviation of mid-price, and trade when the current price deviates significantly from the rolling average. Historical priors from the 3-day dataset (mean = 5250.10, std = 15.63) were used to seed the signal, eliminating cold-start issues.
 
 ---
 

@@ -49,9 +49,7 @@ Trade flow on vouchers was heavily asymmetric:
 
 - **82–97% of voucher flow was selling** (depending on strike)
 - Seller-aggressor dominated across all tradeable strikes
-- This meant we should quote with **wider bids** (to capture seller flow) and **tighter asks**
-
-Quote widths: `BID_WIDTH = 0.5`, `ASK_WIDTH = 1.5`. We wanted to be the first fill when sellers hit the market.
+- This meant we should quote with **tighter bids** (to step inside the resting buyer and capture seller flow) and **wider asks**
 
 ## The Antigravity Correction
 
