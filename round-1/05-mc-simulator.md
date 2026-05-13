@@ -23,7 +23,7 @@ The replay backtester runs against historical data — but there are only 3 days
 | Strategy | MC PnL | Replay PnL | Error |
 |---|---|---|---|
 | Algov4 (Zain v2) | 94,157 | ~95,000 | **< 1%** ✓ |
-| Algov5 (Zain final) | −141,661 | 288,000 | **Completely wrong** ✗ |
+| Algov5 (Zain final) | −141,661 | ~96,000 | **Completely wrong** ✗ |
 
 **The MC simulator was only reliable for algov4-style strategies.** Algov5 used EMA smoothing and threshold logic that interacted with the synthetic book structure differently. The synthetic 2-level books couldn't reproduce the dynamics algov5 exploited.
 

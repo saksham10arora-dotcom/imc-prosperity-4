@@ -37,7 +37,7 @@ Independent statistical analysis — contingency tests, motif analysis, correlat
 
 ## 5. MC Simulator for Strategy Comparison
 
-MC said algov5 was catastrophically bad (−142K). Replay said it was slightly better (+288K). Almost led us to discard the better strategy.
+MC said algov5 was catastrophically bad (−142K per day). Replay showed ~96K per day (288K total). Almost led us to discard the better strategy.
 
 **Lesson:** Never use a single evaluation tool. Cross-validate MC with replay.
 
@@ -47,4 +47,4 @@ MC said algov5 was catastrophically bad (−142K). Replay said it was slightly b
 
 ---
 
-**Final Round 1 Result:** Global Rank **#90** — 12,200 SeaShells live.
+**Final Round 1 Result:** Global Rank **#90** — 12,223 SeaShells live.
