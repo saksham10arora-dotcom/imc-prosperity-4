@@ -96,4 +96,4 @@ The production trader (`finalfinal.py`, 1,940 lines) was far more ambitious than
 - **Position clamping**: all aggregate targets clamped to ±10 (position limit) before ordering
 - **No limit breaches**: order_to_target() enforces position limits on every order
 
-**Backtested PnL: ~1.6M across 3 days (10k-tick practice data).**
+**Backtested PnL: 1.67M across 3 days (10k-tick practice data).**
