@@ -20,13 +20,11 @@ round-1/                    R1: Bot decomposition + OU process
   ├── 02-pepper.md          Trending asset — signal found, unmonetizable
   ├── 03-hidden-bot.md      Hidden bot discovered via live probing
   ├── 04-iawa-intel.md      Cross-team intel that confirmed our calibration
-  ├── 05-mc-simulator.md    Monte Carlo simulator for strategy comparison
-  └── 06-negative-results.md What we tried that didn't work
+  └── 05-mc-simulator.md    Monte Carlo simulator for strategy comparison
 
 round-2/                    R2: Live log forensics + backtester calibration
   ├── 01-hidden-takers.md   64% of fills come from invisible flow
-  ├── 02-maf-manual.md      Manual challenge analysis
-  └── 03-negative-results.md What didn't work
+  └── 03-maf-manual.md      Manual challenge analysis
 
 round-3/                    R3: Market microstructure + options pricing
   ├── 01-hydrogel.md        The ±8 bot discovery
@@ -72,7 +70,7 @@ round-5/                    R5: 50-product research program (the big one)
 2. **Rolling-z beats prev-day-mean by 2× out-of-sample** - resolved a methodology war that was blocking the entire strategy
 3. **100% of trades came from exactly 3 coordinated basket bots** - uninformed, random flow. No informed counterparty exists in R5.
 
-We swept all **1,225 possible product pairs**, found **471 profitable OOS** (87% cross-category), built a 24-pair portfolio, then caught our own selection bias and honestly revised the headline from 552k down to **~155k after realistic fills**.
+We swept all **1,225 possible product pairs**, found **471 profitable OOS** (92% cross-category), built a 24-pair portfolio, then caught our own selection bias and honestly revised the headline from 552k down to **~155k after realistic fills**.
 
 ---
 

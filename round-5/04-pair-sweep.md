@@ -33,7 +33,7 @@ After resolving the methodology war in favor of rolling-z, we asked: why limit o
 Of the 1,225 pairs tested:
 
 - **471 pairs profitable** both in-sample and out-of-sample
-- **433 of those 471 (87%) were cross-category**
+- **433 of those 471 (92%) were cross-category**
 - Total OOS PnL across all 471: **6.6 million**
 
 The cross-category edge was much larger than within-category. Here's why this was surprising: the initial research had focused entirely on within-category structure (PEBBLES constraint, SNACKPACK anti-correlation). But the rolling-z method found that *any* two products with complementary drift patterns could form a profitable pair.

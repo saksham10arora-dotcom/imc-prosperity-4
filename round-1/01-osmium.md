@@ -54,7 +54,7 @@ When we decomposed the order book tick by tick, we found **6 distinct bots**, ea
 - **Volume:** Uniform [2, 7]
 - **Behavior:** Almost never eats the full posted level. Direction-agnostic — doesn't care about distance from fair value. The wall midpoint does not react to trades.
 
-### Bot 6 — Scrooge McDuck (Hidden)
+### Bot 6 — Dumb Bot (Hidden)
 - **Trigger:** Appears ONLY when one side of the order book is completely empty
 - **Behavior:** Bids at FV + 100 (or asks at FV − 100) when the opposite side is cleared
 - **Discovery:** Could NOT be seen in historical data — the book never goes empty without player intervention. Only discoverable by probing live.
@@ -74,7 +74,7 @@ When we decomposed the order book tick by tick, we found **6 distinct bots**, ea
 
 ## Risk Assessment
 
-1. **Scrooge exploit dependency:** ~1.5K of the final 12.2K live score came from Scrooge. If IMC patches it in later rounds, that edge disappears.
+1. **Dumb Bot dependency:** ~1.5K of the final 12.2K live score came from the Dumb Bot. If IMC patches it in later rounds, that edge disappears.
 2. **Bot parameter drift:** Inside bot offset k shifts across days (0.3 to 0.7). Could shift further in live.
 3. **Wall_mid stability:** All fair-value estimates depend on wall_mid being stable. If the inner wall bot changes behavior, all offsets break.
 

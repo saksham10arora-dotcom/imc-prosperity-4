@@ -54,4 +54,4 @@ After iterative calibration:
 
 ---
 
-**Next:** [02-backtester-evolution.md](02-backtester-evolution.md) — From fake fills to high fidelity.
+**Next:** [03-maf-manual.md](03-maf-manual.md) — Manual challenge analysis.
