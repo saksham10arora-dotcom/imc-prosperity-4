@@ -1,4 +1,4 @@
-# 02 — VELVETFRUIT_EXTRACT: The Dual-Role Asset
+# 02 - VELVETFRUIT_EXTRACT: The Dual-Role Asset
 
 ## The Question
 
