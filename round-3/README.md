@@ -1,4 +1,4 @@
-# Round 3 — Market Microstructure & Options Pricing
+# Round 3 - Market Microstructure & Options Pricing
 
 Round 3 opened the GOAT phase (Phase 2). Three algorithmic products:
 
