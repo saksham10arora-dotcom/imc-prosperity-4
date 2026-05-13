@@ -19,15 +19,14 @@ We ran a full statistical fingerprint using 3 days of historical data (days 0–
 
 ## Fair Value: Wall Mid
 
-We tested multiple fair value proxies:
+Wall mid (L1 midpoint) was the clear winner as a fair value proxy:
 
-| Proxy | Correlation with reported mid | Max divergence |
-|---|---|---|
-| Wall mid (L1 midpoint) | **0.9996** | 4.5 ticks |
-| VWAP | 0.9994 | 6.2 ticks |
-| Micro-price | 0.9991 | 8.1 ticks |
+- Correlation with reported mid: **0.9996**
+- Mean divergence: **0.012 ticks**
+- Max divergence: **4.5 ticks**
+- VWAP and wall-mid were nearly identical (within 0.06 ticks)
 
-**Wall mid was the best proxy.** Simple, fast, and almost perfectly correlated with the reported mid.
+Simple, fast, and almost perfectly correlated with the reported mid. No correction needed.
 
 ## The Discovery: The ±8 Bot
 

@@ -30,8 +30,8 @@ On the options side, the naming revealed a clean bilateral flow:
 
 | Mark | Behavior | Lots | Direction | Aggressor? |
 |---|---|---|---|---|
-| **Mark 22** | Persistent seller | 5,683 | 100% sell | 100% aggressor |
-| **Mark 01** | Persistent buyer | 6,053 | 100% buy | 100% passive |
+| **Mark 22** | Persistent seller | 4,972 | 100% sell | 100% aggressor |
+| **Mark 01** | Persistent buyer | 4,636 | 100% buy | 100% passive |
 
 Mark 22 was dumping options. Mark 01 was absorbing them. This was the R3 "seller-dominated flow" — now with names attached.
 
