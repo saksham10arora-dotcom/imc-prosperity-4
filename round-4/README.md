@@ -1,4 +1,4 @@
-# Round 4 — Named Counterparty Forensics
+# Round 4 - Named Counterparty Forensics
 
 Same three products as Round 3 (HYDROGEL_PACK, VELVETFRUIT_EXTRACT, VEV Vouchers), but with two critical changes:
 
