@@ -45,4 +45,4 @@ Pepper PnL drops from +86K to +2.7K under a crash. Strategy survives but gets hu
 
 ---
 
-**Next:** [06-negative-results.md](06-negative-results.md) — Everything we tried that didn't work.
+
