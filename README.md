@@ -2,7 +2,7 @@
 
 > **#154 worldwide · #18 India · Top 1% out of 18,803 teams across 117 countries**
 
-This repository documents the complete research process behind our performance in the IMC Prosperity 4 algorithmic trading competition. It is organized chronologically — each step explains *what we investigated*, *what we found*, and *why it mattered* for the next step.
+This repository documents the complete research process behind our performance in the IMC Prosperity 4 algorithmic trading competition. It is organized chronologically - each step explains *what we investigated*, *what we found*, and *why it mattered* for the next step.
 
 **Team:** Alex Zhang · Annanye Naik · Saksham Arora · Zain Hirji
 
