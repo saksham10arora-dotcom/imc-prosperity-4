@@ -1,29 +1,4 @@
-# 08 — Execution Constraints: The 1k-Tick Discovery & Group vs Pair
-
-## The 1,000-Tick Website Discovery
-
-All our research was done on 10,000-tick-per-day practice data. Parameters were optimized for 10k ticks: windows of 500–2000, warm-up periods of 500+ ticks.
-
-Then we discovered: **the Prosperity website backtester ran 1,000 ticks per day, not 10,000.**
-
-This broke everything:
-- A window of w=2000 would never warm up on a 1k-tick day
-- Even w=500 needed half the day to produce its first signal
-- Parameters that were net-positive on 10k ticks were **net-negative** on 1k ticks
-
-### The Re-Optimization
-
-We ran a full grid search for the 1k-tick environment across window ∈ {50, 75, 100, 150, 200} and z-threshold ∈ {1.0, 1.5, 2.0, 2.5, 3.0}:
-
-| Module | Optimal window | Optimal z | 1k-tick PnL |
-|---|---|---|---|
-| PEBBLES (group residual) | 200 | 2.5 | 51,055 |
-| TRANSLATOR (group residual) | 100 | 2.5 | 13,445 |
-| MICROCHIP OVAL-TRI (pair) | 75 | 2.0 | 10,488 |
-
-Modules that needed long windows to be profitable were dropped or demoted: ROBOT (always negative on 1k-tick days at all tested settings), SNACKPACK (negative across the grid).
-
-**Lesson:** Infrastructure constraints (tick counts, state size limits, execution time) matter as much as alpha. We had the research to ship a more profitable strategy but couldn't fit the parameters.
+# 08 — Execution Constraints: Group vs Pair & Production Architecture
 
 ## Group Residual vs Pair Spread
 

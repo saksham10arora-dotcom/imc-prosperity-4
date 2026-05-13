@@ -6,6 +6,8 @@ This repository documents the complete research process behind our performance i
 
 **Team:** Alex Zhang · Annanye Naik · Saksham Arora · Zain Hirji
 
+> **Full team writeup (manual + algo strategies):** [zainy-477/imc-prosperity-4](https://github.com/zainy-477/imc-prosperity-4)
+
 ---
 
 ## How to Read This Repo
