@@ -1,4 +1,4 @@
-# 06 — Negative Results: What We Tried That Didn't Work
+# 06 - Negative Results: What We Tried That Didn't Work
 
 Every research program produces dead ends. These are ours.
 
