@@ -1,4 +1,4 @@
-# IMC Prosperity 4 — Research Archive
+# IMC Prosperity 4 - Research Archive
 
 > **#154 worldwide · #18 India · Top 1% out of 18,803 teams across 117 countries**
 
@@ -43,14 +43,14 @@ round-5/                    R5: 50-product research program (the big one)
 
 ## The Arc in 60 Seconds
 
-**Round 3** — We discovered that HYDROGEL_PACK had a symmetric bot trading at exactly ±8 ticks from fair value. We undercut it at ±7. For options, we proved the vol smile was flat (R² = 0.02) and used single-vol Black-Scholes. Result: **#84 globally, #7 India.**
+**Round 3** - We discovered that HYDROGEL_PACK had a symmetric bot trading at exactly ±8 ticks from fair value. We undercut it at ±7. For options, we proved the vol smile was flat (R² = 0.02) and used single-vol Black-Scholes. Result: **#84 globally, #7 India.**
 
-**Round 4** — Counterparty names appeared. We identified Mark 38 as the ±8 bot, Mark 14 as the passive market-maker, Mark 22 as a sporadic ±4 undercut. For vouchers, Mark 22 was a persistent seller and Mark 01 the persistent buyer — we stepped inside Mark 01's bid. A sub-agent twice produced wrong IV calibration; our independent review process caught both errors before they shipped.
+**Round 4** - Counterparty names appeared. We identified Mark 38 as the ±8 bot, Mark 14 as the passive market-maker, Mark 22 as a sporadic ±4 undercut. For vouchers, Mark 22 was a persistent seller and Mark 01 the persistent buyer — we stepped inside Mark 01's bid. A sub-agent twice produced wrong IV calibration; our independent review process caught both errors before they shipped.
 
 **Round 5** — Everything reset. 50 new products, position limits dropped 20×, counterparty names redacted again. We ran a 21-script research program that produced three headline findings:
 
-1. **PEBBLES sum = 50,000 ± 2.8** — a hard generator constraint across 30,000 ticks
-2. **Rolling-z beats prev-day-mean by 2× out-of-sample** — resolved a methodology war that was blocking the entire strategy
+1. **PEBBLES sum = 50,000 ± 2.8** - a hard generator constraint across 30,000 ticks
+2. **Rolling-z beats prev-day-mean by 2× out-of-sample** - resolved a methodology war that was blocking the entire strategy
 3. **100% of trades came from exactly 3 coordinated basket bots** — uninformed, random flow. No informed counterparty exists in R5.
 
 We swept all **1,225 possible product pairs**, found **471 profitable OOS** (87% cross-category), built a 24-pair portfolio, then caught our own selection bias and honestly revised the headline from 552k down to **~155k after realistic fills**.
