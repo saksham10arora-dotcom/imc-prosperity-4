@@ -18,16 +18,15 @@ The research is organized into five rounds. Each round folder contains numbered 
 round-1/                    R1: Bot decomposition + OU process
   ├── 01-osmium.md          6-bot fingerprint + OU clock discovery
   ├── 02-pepper.md          Trending asset — signal found, unmonetizable
-  ├── 03-scrooge-mcduck.md  Hidden bot discovered via live probing
+  ├── 03-hidden-bot.md      Hidden bot discovered via live probing
   ├── 04-iawa-intel.md      Cross-team intel that confirmed our calibration
   ├── 05-mc-simulator.md    Monte Carlo simulator for strategy comparison
   └── 06-negative-results.md What we tried that didn't work
 
 round-2/                    R2: Live log forensics + backtester calibration
   ├── 01-hidden-takers.md   64% of fills come from invisible flow
-  ├── 02-backtester-evolution.md  From 66% error to 0.04% vs official replay
-  ├── 03-maf-manual.md      Manual challenge analysis
-  └── 04-negative-results.md What didn't work
+  ├── 02-maf-manual.md      Manual challenge analysis
+  └── 03-negative-results.md What didn't work
 
 round-3/                    R3: Market microstructure + options pricing
   ├── 01-hydrogel.md        The ±8 bot discovery
@@ -59,7 +58,7 @@ round-5/                    R5: 50-product research program (the big one)
 
 ## The Arc in 60 Seconds
 
-**Round 1** - ASH_COATED_OSMIUM was an OU process (half-life ~24 ticks) with 6 decomposable bots. We fingerprinted each one independently. A competitor tip revealed a hidden Scrooge McDuck bot that only appears when one side of the book is emptied — we exploited it for +1.5K of our 12.2K live score. Result: **#90 globally.**
+**Round 1** - ASH_COATED_OSMIUM was an OU process (half-life ~24 ticks) with 6 decomposable bots. We fingerprinted each one independently. Live probing revealed a hidden bot that only appears when one side of the book is emptied — we exploited it for +1.5K of our 12.2K live score. Result: **#90 globally.**
 
 **Round 2** - We analyzed our live execution log and found 64% of fills came from hidden flow — counterparties invisible in the book snapshot. Built a high-fidelity backtester calibrated to 0.04% error vs official replay. This infrastructure was the foundation for every round after.
 
