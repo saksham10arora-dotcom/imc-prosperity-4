@@ -53,7 +53,7 @@ Trade flow on vouchers was heavily asymmetric:
 
 ## The Antigravity Correction
 
-During development, our IDE agent initially had the bid/ask widths **swapped** — wider on the ask side, tighter on the bid. Our independent review process (Antigravity) caught this by doing a direct recount of aggressor direction across 3 days of trade data.
+During development, our IDE agent initially had the bid/ask widths **swapped** - wider on the ask side, tighter on the bid. Our independent review process (Antigravity) caught this by doing a direct recount of aggressor direction across 3 days of trade data.
 
 This would have been catastrophic if shipped: we'd have been quoting the wrong side of the market, offering liquidity where there was no demand and missing the dominant seller flow entirely.
 
@@ -61,8 +61,8 @@ This would have been catastrophic if shipped: we'd have been quoting the wrong s
 
 ## Result
 
-Round 3 finished at **#84 globally, #7 in India** — up from #277 at the end of Phase 1. The HYDROGEL market-making strategy drove the bulk of PnL.
+Round 3 finished at **#84 globally, #7 in India** - up from #277 at the end of Phase 1. The HYDROGEL market-making strategy drove the bulk of PnL.
 
 ---
 
-**Next round:** [Round 4](../round-4/README.md) — Counterparty names appear.
+**Next round:** [Round 4](../round-4/README.md) - Counterparty names appear.
