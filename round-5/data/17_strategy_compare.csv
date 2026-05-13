@@ -1,0 +1,8 @@
+strategy,n_pairs,is_pnl_d23,oos_pnl_d4,n_oos_pos,n_oos_neg
+A: total IS PnL,24,806655.0,197930.0,20,4
+"A2: total IS PnL, n>=8",24,806655.0,197930.0,20,4
+"B: D2>0 AND D3>0, rank by total",24,791850.0,194990.0,20,4
+"C: D2>0, D3>0, total>=20k",19,717470.0,188180.0,17,2
+D: rank by D3 only,24,683855.0,156820.0,17,7
+"E: rank by min(D2,D3)",25,754260.0,179730.0,18,7
+F: stability + rank by D3,24,738855.0,187305.0,20,4
